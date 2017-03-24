@@ -19,7 +19,7 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 	@Bean
 	public VelocityConfigurer velocityConfig(){
 		VelocityConfigurer velocityConfigurer = new VelocityConfigurer();
-		velocityConfigurer.setResourceLoaderPath("/WEB-INF/app/");
+		velocityConfigurer.setResourceLoaderPath("/resources/");
 	    return velocityConfigurer;
 	}
 
@@ -29,7 +29,7 @@ public class AppConfig extends WebMvcConfigurerAdapter{
          
         viewResolver.setViewClass(VelocityView.class);
         viewResolver.setCache(true);
-        viewResolver.setPrefix("/WEB-INF/app/");
+        viewResolver.setPrefix("/resources/");
         viewResolver.setSuffix(".html");
         viewResolver.setExposeSpringMacroHelpers(true);
  

@@ -32,11 +32,9 @@ public class MainController {
 	ClassDao classDao;
 	
 	
-	@RequestMapping(value ="/main" ,method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.GET)
 	public String getMainLandingPage(){
-		List<Object> data = classDao.getData(UserInfo.class);
-		System.out.println(data.size());
-		return "index";
+		return "app/index";
 	}
 	
 	@PostConstruct
